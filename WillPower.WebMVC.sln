@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WillPower.WebMVC", "WillPower.WebMVC\WillPower.WebMVC.csproj", "{FC725E89-8FDA-4B05-AEB7-BA1809FA6FDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WillPower.Contracts", "WillPower.Contracts\WillPower.Contracts.csproj", "{0E3A86B9-8492-4E4C-850C-E010E8D0E839}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WillPower.Data", "WillPower.Data\WillPower.Data.csproj", "{62D62EB6-35AC-4BAE-87FB-A140F41B6B60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WillPower.Models", "WillPower.Models\WillPower.Models.csproj", "{BF56A162-4536-4DD0-AD93-5090944D13BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WillPower.Services", "WillPower.Services\WillPower.Services.csproj", "{4031F092-7346-4C87-9221-FF696EF3C5AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WillPower.UnitTests", "WillPower.UnitTests\WillPower.UnitTests.csproj", "{07C858E1-B1C3-4AE5-9A44-FD9301E32A42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC725E89-8FDA-4B05-AEB7-BA1809FA6FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC725E89-8FDA-4B05-AEB7-BA1809FA6FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC725E89-8FDA-4B05-AEB7-BA1809FA6FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC725E89-8FDA-4B05-AEB7-BA1809FA6FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E3A86B9-8492-4E4C-850C-E010E8D0E839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E3A86B9-8492-4E4C-850C-E010E8D0E839}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E3A86B9-8492-4E4C-850C-E010E8D0E839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E3A86B9-8492-4E4C-850C-E010E8D0E839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D62EB6-35AC-4BAE-87FB-A140F41B6B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D62EB6-35AC-4BAE-87FB-A140F41B6B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D62EB6-35AC-4BAE-87FB-A140F41B6B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D62EB6-35AC-4BAE-87FB-A140F41B6B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF56A162-4536-4DD0-AD93-5090944D13BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF56A162-4536-4DD0-AD93-5090944D13BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF56A162-4536-4DD0-AD93-5090944D13BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF56A162-4536-4DD0-AD93-5090944D13BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4031F092-7346-4C87-9221-FF696EF3C5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4031F092-7346-4C87-9221-FF696EF3C5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4031F092-7346-4C87-9221-FF696EF3C5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4031F092-7346-4C87-9221-FF696EF3C5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07C858E1-B1C3-4AE5-9A44-FD9301E32A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C858E1-B1C3-4AE5-9A44-FD9301E32A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C858E1-B1C3-4AE5-9A44-FD9301E32A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C858E1-B1C3-4AE5-9A44-FD9301E32A42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F93CF324-DE08-4472-A59A-2CEB0EAFED40}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,74 @@
+﻿@model WillPower.Models.GoalItemDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GoalItemDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalItemID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalItemID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalItemName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalItemName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalItemPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalItemPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoalItemLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoalItemLocation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HowMuchCloserToGoal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HowMuchCloserToGoal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUTC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUTC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUTC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

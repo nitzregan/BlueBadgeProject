@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WillPower.Models.MonthlyFinanceListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Monthly Finances</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr class="examplething">
+        <th>
+            @Html.DisplayNameFor(model => model.Month)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthlyTakeHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoneyLeftToSpend)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Month)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthlyTakeHome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoneyLeftToSpend)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.MonthlyFinanceID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.MonthlyFinanceID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.MonthlyFinanceID })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div class="total">
+    <h5>Total Saved</h5>
+    @ViewBag.TotalSaved
+</div>
