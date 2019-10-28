@@ -9,6 +9,7 @@ using WillPower.Services;
 
 namespace WillPower.WebMVC.Controllers
 {
+    [Authorize]
     public class GoalItemController : Controller
     {
         public ActionResult Index()

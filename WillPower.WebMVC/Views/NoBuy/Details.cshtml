@@ -4,71 +4,87 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Unpurchased Item Details</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ItemID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ItemName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemPrice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ItemPrice)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemLocation)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ItemLocation)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GoalItemID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GoalItemID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedUTC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedUTC)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedUTC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedUTC)
-        </dd>
-
-    </dl>
+<div class="div1">
+    <h2>Details</h2>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="dad">
+
+    <div class="div7">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ItemID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ItemName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemPrice)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ItemPrice)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemLocation)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ItemLocation)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GoalItemID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GoalItemID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedUTC)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedUTC)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedUTC)
+            </dd>
+
+        </dl>
+    </div>
+
+    <div class="div8">
+
+        <div class="div9">
+            <p>@Html.ActionLink("Edit", "Edit", new { id = Model.ItemID })</p>
+        </div>
+
+        <div class="div10">
+            <p>@Html.ActionLink("Delete", "Delete", new { id = Model.ItemID })</p>
+        </div>
+
+        <div class="div11">
+            <p>@Html.ActionLink("Back to List", "Index")</p>
+        </div>
+
+    </div>
+
+</div>

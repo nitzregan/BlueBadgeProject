@@ -111,7 +111,7 @@ namespace WillPower.Services
                 entity.GoalItemName = model.GoalItemName;
                 entity.GoalItemPrice = model.GoalItemPrice;
                 entity.GoalItemLocation = model.GoalItemLocation;
-                entity.ModifiedUTC = DateTimeOffset.UtcNow;
+                entity.ModifiedUTC = DateTimeOffset.Now;
 
 
                 return ctx.SaveChanges() == 1;

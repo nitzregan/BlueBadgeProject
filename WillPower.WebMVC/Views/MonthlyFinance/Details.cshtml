@@ -4,95 +4,112 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>MonthlyFinanceDetail</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyFinanceID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyFinanceID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Month)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Month)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Year)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Year)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MonthlyTakeHome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MonthlyTakeHome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CostOfBills)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CostOfBills)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.GoalItemID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.GoalItemID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MoneyLeftToSpend)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MoneyLeftToSpend)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TotalSavedFromNoBuysThisMonth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TotalSavedFromNoBuysThisMonth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedUTC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CreatedUTC)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedUTC)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedUTC)
-        </dd>
-
-    </dl>
+<div class="div1">
+    <h2>Details</h2>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+<div class="dad">
+
+    <div class="div7">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyFinanceID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyFinanceID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Month)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Month)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Year)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Year)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyTakeHome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyTakeHome)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CostOfBills)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CostOfBills)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.GoalItemID)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.GoalItemID)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MoneyLeftToSpend)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MoneyLeftToSpend)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalSavedFromNoBuysThisMonth)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotalSavedFromNoBuysThisMonth)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedUTC)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedUTC)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedUTC)
+            </dd>
+
+        </dl>
+    </div>
+
+
+    <div class="div8">
+
+        <div class="div9">
+            <p>@Html.ActionLink("Edit", "Edit", new { id = Model.MonthlyFinanceID })</p>
+        </div>
+
+        <div class="div10">
+            <p>@Html.ActionLink("Delete", "Delete", new { id = Model.MonthlyFinanceID })</p>
+        </div>
+
+        <div class="div11">
+            <p>@Html.ActionLink("Back to List", "Index")</p>
+        </div>
+
+    </div>
+
+</div>

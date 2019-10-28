@@ -4,76 +4,115 @@
     ViewBag.Title = "Delete";
 }
 
-
+<div class="div1">
 <h3>Are you sure you want to delete this?</h3>
-<div>
+</div>
 
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemID)
-        </dt>
+<div class="dad2">
 
-        <dd>
-            @Html.DisplayFor(model => model.ItemID)
-        </dd>
+    <div class="div12">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemName)
-        </dt>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemID)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ItemName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ItemID)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemPrice)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ItemPrice)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ItemName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ItemLocation)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemPrice)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ItemLocation)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ItemPrice)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.GoalItemID)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemLocation)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.GoalItemID)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ItemLocation)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CreatedUTC)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.GoalItemID)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CreatedUTC)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.GoalItemID)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedUTC)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedUTC)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedUTC)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CreatedUTC)
+            </dd>
 
-    </dl>
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedUTC)
+            </dt>
 
-    @using (Html.BeginForm()) {
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedUTC)
+            </dd>
+
+        </dl>
+    </div>
+
+    <div class="div13">
+
+        <div class="div14">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-actions">
+                    <input type="submit" value="Delete" class="btn btn-link" />
+                </div>
+            }
+        </div>
+
+        <div class="div15">
+            <p>@Html.ActionLink("Details", "Details", new { id = Model.ItemID })</p>
+        </div>
+
+        <div class="div16">
+            <p>@Html.ActionLink("Back to List", "Index")</p>
+        </div>
+
+    </div>
+
+
+
+
+    @*@using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    }*@
+
+    @*@using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
             @Html.ActionLink("Back to List", "Index")
         </div>
-    }
+    }*@
+
 </div>

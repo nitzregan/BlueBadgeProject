@@ -4,48 +4,71 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Monthly Finances</h2>
+<div class="div1">
+    <h2>Monthly Finances</h2>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr class="examplething">
-        <th>
-            @Html.DisplayNameFor(model => model.Month)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MonthlyTakeHome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MoneyLeftToSpend)
-        </th>
-        <th></th>
-    </tr>
+<div class="mom">
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Month)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MonthlyTakeHome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MoneyLeftToSpend)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.MonthlyFinanceID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.MonthlyFinanceID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.MonthlyFinanceID })
-            </td>
-        </tr>
-    }
+    <div class="div2">
+        <table class="table table-borderless table-hover">
+            <thead>
+                <tr>
+                    <th class="col-sm-2" scope="col">
+                        @Html.DisplayNameFor(model => model.Month)
+                    </th>
+                    <th class="col-sm-2" scope="col">
+                        @Html.DisplayNameFor(model => model.MonthlyTakeHome)
+                    </th>
+                    <th class="col-sm-2" scope="col">
+                        @Html.DisplayNameFor(model => model.MoneyLeftToSpend)
+                    </th>
+                </tr>
+            </thead>
 
-</table>
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr onclick="location.href = '@Url.Action("Details", "MonthlyFinance", new { id = item.MonthlyFinanceID })'">
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.Month)
+                        </td>
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.MonthlyTakeHome)
+                        </td>
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.MoneyLeftToSpend)
+                        </td>
+                        @*<td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.MonthlyFinanceID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.MonthlyFinanceID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.MonthlyFinanceID })
+                            </td>*@
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
 
-<div class="total">
-    <h5>Total Saved</h5>
-    @ViewBag.TotalSaved
+    <div class="div3">
+        <div class="div4">
+            <div class="total">
+                <h5>Total Saved</h5>
+                @ViewBag.TotalSaved
+            </div>
+        </div>
+
+        <div class="div5">
+            <a href="https://localhost:44377/MonthlyFinance/Create">
+                <h5>+ New</h5>
+            </a>
+        </div>
+
+        <div class="div6">
+            <a href="https://localhost:44377/NoBuy">
+                <h5>Unwish List</h5>
+            </a>
+        </div>
+    </div>
+
 </div>

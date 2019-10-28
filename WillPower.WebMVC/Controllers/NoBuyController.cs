@@ -9,6 +9,7 @@ using WillPower.Services;
 
 namespace WillPower.WebMVC.Controllers
 {
+    [Authorize]
     public class NoBuyController : Controller
     {
         public ActionResult Index()

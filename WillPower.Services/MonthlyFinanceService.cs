@@ -81,7 +81,7 @@ namespace WillPower.Services
                 var noBuys =
                     ctx
                     .NoBuys
-                    .Where(e => e.CreatedUTC.Month == (int)entity.Month && e.CreatedUTC.Year == entity.Year).ToList()
+                    .Where(e => e.CreatedUTC.Month == (int)entity.Month && e.CreatedUTC.Year == entity.Year && e.UserID == _userID).ToList()
                     .Sum(e => e.ItemPrice);
 
 
@@ -117,7 +117,7 @@ namespace WillPower.Services
                 entity.Year = model.Year;
                 entity.CostOfBills = model.CostOfBills;
                 entity.GoalItemID = model.GoalItemID;
-                entity.ModifiedUTC = DateTimeOffset.UtcNow;
+                entity.ModifiedUTC = DateTimeOffset.Now;
 
 
                 return ctx.SaveChanges() == 1;

@@ -4,52 +4,72 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Wish List</h2>
+<div class="div1">
+    <h2>Wish List</h2>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr class="examplething">
-
-        <th>
-            @Html.DisplayNameFor(model => model.GoalItemName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GoalItemPrice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HowMuchCloserToGoal)
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalItemName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GoalItemPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HowMuchCloserToGoal)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.GoalItemID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.GoalItemID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.GoalItemID })
-            </td>
-        </tr>
-    }
-
-</table>
+<div class="mom">
 
 
-<div class="total">
-    <h4>Total Saved </h4>
-    @ViewBag.TotalSaved
+    <div class="div2">
+        <table class="table table-borderless table-hover">
+            <thead>
+                <tr>
+                    <th class="col-sm-2" scope="col">
+                        @Html.DisplayNameFor(model => model.GoalItemName)
+                    </th>
+                    <th class="col-sm-2" scope="col">
+                        @Html.DisplayNameFor(model => model.GoalItemPrice)
+                    </th>
+                    <th class="col-sm-2" scope="col">
+                        @Html.DisplayNameFor(model => model.HowMuchCloserToGoal)
+                    </th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr onclick="location.href = '@Url.Action("Details", "GoalItem", new { id = item.GoalItemID })'">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GoalItemName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GoalItemPrice)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HowMuchCloserToGoal)
+                        </td>
+                        @*<td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.GoalItemID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.GoalItemID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.GoalItemID })
+                            </td>*@
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+
+    <div class="div3">
+        <div class="div4">
+            <div class="total">
+                <h5>Total Saved</h5>
+                @ViewBag.TotalSaved
+            </div>
+        </div>
+
+        <div class="div5">
+            <a href="https://localhost:44377/GoalItem/Create">
+                <h5>+ New</h5>
+            </a>
+        </div>
+
+        <div class="div6">
+            <a href="https://localhost:44377/NoBuy">
+                <h5>Unwish List</h5>
+            </a>
+        </div>
+    </div>
 
 </div>

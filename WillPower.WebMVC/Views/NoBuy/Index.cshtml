@@ -4,42 +4,62 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Unwish List</h2>
+<div class="div1">
+    <h2>Unwish List</h2>
+</div>
 
-<p>
-    @Html.ActionLink("+ New", "Create")
-</p>
-<table class="table">
-    <tr class="examplething">
-        <th>
-            @Html.DisplayNameFor(model => model.ItemName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ItemPrice)
-        </th>
-        <th></th>
-    </tr>
+<div class="mom">
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ItemName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ItemPrice)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ItemID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.ItemID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.ItemID })
-            </td>
-        </tr>
-    }
+    <div class="div2">
+        <table class="table table-borderless table-hover">
+            <thead>
+                <tr>
+                    <th class="col-sm-2" scope="col">
+                        @Html.DisplayNameFor(model => model.ItemName)
+                    </th>
+                    <th class="col-sm-2" scope="col">
+                        @Html.DisplayNameFor(model => model.ItemPrice)
+                    </th>
+                </tr>
+            </thead>
 
-</table>
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr onclick="location.href = '@Url.Action("Details", "NoBuy", new { id = item.ItemID })'">
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.ItemName)
+                        </td>
+                        <td scope="row">
+                            @Html.DisplayFor(modelItem => item.ItemPrice)
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
 
-<div class="total">
-    <h5>Total Saved</h5>
-    @ViewBag.TotalSaved
+    <div class="div3">
+
+        <div class="div4">
+            <div class="total">
+                <h5>Total Saved</h5>
+                @ViewBag.TotalSaved
+            </div>
+        </div>
+
+        <div class="div5">
+            <a href="https://localhost:44377/NoBuy/Create">
+                <h5>+ New</h5>
+            </a>
+        </div>
+
+        <div class="div6">
+            <a href="https://localhost:44377/GoalItem">
+                <h5>Wish List</h5>
+            </a>
+        </div>
+
+    </div>
+
 </div>

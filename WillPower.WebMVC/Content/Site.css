@@ -1,12 +1,65 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #E7E3EF;
+    background-color: #ECECEC;
+    font-family: 'Work Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .navbar, .navbar-inverse, .navbar-fixed-top {
-    background-color: #5A6C73;
+    background-color: #E37C64;
+    color: #ECECEC;
 }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #ECECEC;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: #E4BCB4;
+        }
+
+    .navbar-inverse .navbar-brand {
+        color: #ECECEC;
+    }
+
+        .navbar-inverse .navbar-brand:hover {
+            color: #E4BCB4;
+        }
+
+.navbar-inverse {
+    border: none;
+}
+
+    .navbar-inverse .navbar-toggle {
+        border-color: #E37C64;
+    }
+
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+        border-color: #E37C64;
+    }
+
+    .navbar-inverse .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+
+    .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+        /*background-color: #ECECEC;*/
+        background-color: #E37C64;
+    }
+
+    /*.navbar-inverse .navbar-toggle .icon-bar:hover, .navbar-inverse .navbar-toggle .icon-bar:focus {
+        background-color: #E37C64;
+    }*/
+
+a {
+    color: #E37C64;
+}
+
+    a:hover {
+        color: #E4BCB4;
+    }
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -27,6 +80,274 @@ textarea {
     max-width: 280px;
 }
 
-.examplething{
-    background: green;
+.btn-primary {
+    color: #ECECEC;
+    background-color: #E37C64;
+    border-color: #E37C64;
+}
+
+.btn-default {
+    color: #ECECEC;
+    background-color: #E37C64;
+    border-color: #E37C64;
+}
+
+.btn-primary:hover {
+    color: #ECECEC;
+    background-color: #E4BCB4;
+    border-color: #E4BCB4;
+}
+
+.btn-default:hover {
+    color: #ECECEC;
+    background-color: #E4BCB4;
+    border-color: #E4BCB4;
+}
+
+.btn-link {
+    color: #E37C64;
+}
+
+footer {
+    margin-top: auto !important;
+    position: fixed;
+    bottom: 0;
+    color: #E4BCB4;
+}
+
+
+/*index view*/
+.mom {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 90%;
+}
+
+.div2 {
+    border: 3px solid #E37C64;
+    width: 70%;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #E37C64;
+}
+
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: none;
+    background-color: #E37C64;
+}
+
+.table > tbody > tr > td {
+    border-top: none;
+}
+
+.table > tbody + tbody {
+    border-top: none;
+}
+
+.div3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    width: 25%;
+    text-align: center;
+    color: #E37C64;
+}
+
+    .div3 a {
+        color: #E37C64
+    }
+
+.div4 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div5 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div6 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*details view*/
+.dad {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 90%;
+}
+
+.div7 {
+    border: 3px solid #E37C64;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.div8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    width: 25%;
+    text-align: center;
+    color: #E37C64;
+}
+
+    .div8 a {
+        color: #E37C64;
+    }
+
+.div9 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div10 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div11 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*delete view*/
+.dad2 {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 90%;
+}
+
+.div12 {
+    border: 3px solid #E37C64;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.div13 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    width: 25%;
+    text-align: center;
+    color: #E37C64;
+}
+
+    .div13 a {
+        color: #E37C64;
+    }
+
+.div14 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div15 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div16 {
+    border: 3px solid #E37C64;
+    height: 6em;
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*create view*/
+.form-control {
+    background-color: transparent;
+    border: 2px solid #E37C64;
+    border-top: transparent;
+    border-right: transparent;
+    box-shadow: none;
+}
+
+select{
+    color: #E57866 !important;
+
+}
+
+    .form-control dropdown {
+        background-color: pink;
+    }
+
+.create-btn btn btn-default {
+    border-color: #E37C64;
+    color: #E37C64	;
+}
+
+.homePage {
+    background-image: url('/Content/willpowerhome.jpg');
+    position: absolute;
+    left: 0;
+    padding: 1em 1em;
+    background-size:cover;
+    height: 100%;
+    width: 100%;
+}
+
+.homeCard {
+    margin: auto auto;
+    min-width: 300px;
+    width: 45%;
+    text-align:center;
+}
+
+    .homeCard h3 {
+        color: #E37C64;
+        font-weight: bold;
+    }
+
+.div20 {
+    
+    width: 70%;
 }

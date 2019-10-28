@@ -4,58 +4,74 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
-        <h4>Monthly Finance Edit</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.MonthlyFinanceID)
-        @Html.HiddenFor(model => model.Month)
-        @Html.HiddenFor(model => model.Year)
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.MonthlyTakeHome, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MonthlyTakeHome, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MonthlyTakeHome, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.CostOfBills, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CostOfBills, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CostOfBills, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.GoalItemID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("GoalItemID", new SelectList(ViewBag.GoalItem, "GoalItemID", "GoalItemName"), null, new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.GoalItemID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="div1">
+    <h2>Edit</h2>
 </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+<div class="mom">
+
+    <div class="div20">
+
+
+        @using (Html.BeginForm())
+
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.MonthlyFinanceID)
+                @Html.HiddenFor(model => model.Month)
+                @Html.HiddenFor(model => model.Year)
+
+
+                <div class="form-group">
+                    @*@Html.LabelFor(model => model.MonthlyTakeHome, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.MonthlyTakeHome, new { htmlAttributes = new { @class = "form-control", placeholder = "Monthly Take Home" } })
+                        @Html.ValidationMessageFor(model => model.MonthlyTakeHome, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @*@Html.LabelFor(model => model.CostOfBills, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.CostOfBills, new { htmlAttributes = new { @class = "form-control", placeholder = "Cost of Bills" } })
+                        @Html.ValidationMessageFor(model => model.CostOfBills, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @*@Html.LabelFor(model => model.GoalItemID, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                    <div class="col-md-10">
+                        @Html.DropDownList("GoalItemID", new SelectList(ViewBag.GoalItem, "GoalItemID", "GoalItemName"), null, new { @class = "form-control dropdown", placeholder = "Goal Item" })
+                        @Html.ValidationMessageFor(model => model.GoalItemID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="div3">
+        <div class="div5">
+            <p>@Html.ActionLink("Details", "Details", new { id = Model.MonthlyFinanceID })</p>
+        </div>
+
+        <div class="div6">
+            <p>@Html.ActionLink("Back to List", "Index")</p>
+        </div>
+    </div>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+</div>
