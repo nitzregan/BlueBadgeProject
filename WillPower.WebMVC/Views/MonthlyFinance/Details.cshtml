@@ -81,7 +81,8 @@
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.CreatedUTC)
+                @*@Html.DisplayFor(model => model.CreatedUTC)*@
+                @Model.CreatedUTC.ToString("d")
             </dd>
 
             <dt>
@@ -89,7 +90,10 @@
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.ModifiedUTC)
+                @if (Model.ModifiedUTC.HasValue)
+                {
+                    @Model.ModifiedUTC.Value.ToString("d")
+                }
             </dd>
 
         </dl>
